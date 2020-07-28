@@ -1,0 +1,7 @@
+.search-bar{
+    height: 150px;
+    width: 100%;
+    padding: 50px 0;
+    box-sizing: border-box;
+    display: flex;
+}

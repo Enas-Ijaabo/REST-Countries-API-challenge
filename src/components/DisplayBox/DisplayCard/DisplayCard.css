@@ -1,0 +1,17 @@
+.display-card{
+    width:260px;
+    margin-bottom: 80px;
+    background-color: white;
+}
+
+.flag{
+    width: 100%;
+    height: 160px;
+}
+.title{
+    display: inline;
+}
+
+.value{
+    display: inline;
+}

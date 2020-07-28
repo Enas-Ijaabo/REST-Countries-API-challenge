@@ -1,0 +1,19 @@
+.region-selector{
+    background-color: white;
+    border: none;
+    height: 50px;
+    justify-self: flex-end;
+    margin-left: auto;
+    outline:none; 
+    width: 200px;
+    box-shadow: -5px 4px 6px 0px hsl(0, 0%, 90%);
+
+}
+
+.region-selector option:focus{
+    border: none;
+    outline: none;
+}
+.region-selector option:hover{
+    color: blue;
+}
