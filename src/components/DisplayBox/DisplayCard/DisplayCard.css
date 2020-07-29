@@ -1,7 +1,7 @@
 .display-card{
     width:260px;
-    margin-bottom: 80px;
-    background-color: white;
+    margin:0 70px 80px 0;
+    background-color: #FFF;
 }
 
 .flag{

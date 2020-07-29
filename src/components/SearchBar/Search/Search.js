@@ -1,6 +1,5 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import icon from '../../../assets/icons8-search.svg';
-import DarkModeContext from '../../../context/DarkModeContext';
 import './Search.css';
 const Search = (props) => {
 

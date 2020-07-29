@@ -2,10 +2,11 @@ import React, { useEffect, useState, useContext } from 'react';
 import DisplayCard from './DisplayCard/DisplayCard';
 import './DisplayBox.css';
 import { DarkModeContext } from '../../context/DarkModeContext';
+import { Link } from 'react-router-dom';
 
 const DisplayBox = (props) => {
 
-    const {darkModeOn} = useContext(DarkModeContext);
+    const { darkModeOn } = useContext(DarkModeContext);
 
     const [countries, setCountries] = useState([]);
     useEffect(() => {
@@ -23,12 +24,12 @@ const DisplayBox = (props) => {
                 return response.json();
             })
             .then((responseData) => {
-
                 const countryArray = [];
                 for (let i = 0; i < responseData.length; i++) {
                     const nesData = {
                         name: responseData[i].name,
                         nativeName: responseData[i].nativeName,
+                        alpha3Code: responseData[i].alpha3Code,
                         region: responseData[i].region,
                         capital: responseData[i].capital,
                         population: responseData[i].population,
@@ -46,10 +47,8 @@ const DisplayBox = (props) => {
                 if (props.region !== '' && props.countryname !== '') {
                     const filteredCountryArray = countryArray.filter((country) => {
                         return country.region === props.region && country.name === props.countryname;
-   
+
                     })
-                    console.log(filteredCountryArray);
-                    
 
                     setCountries(filteredCountryArray);
                 } else {
@@ -64,9 +63,27 @@ const DisplayBox = (props) => {
     // const [hasError, setErrors]=  useState(false);
 
     return (
-        <div className={`display-box ${darkModeOn? 'dark-mode': ''}`}>
+
+        <div className={`display-box ${darkModeOn ? 'dark-mode' : ''}`}>
             {countries.map((country) => {
-                return <DisplayCard key={country.name} countryName={country.name} population={country.population} region={country.region} capital={country.capital} flag={country.flagPicUrl} />
+                return <Link to={{
+                    pathname: `/country/:${country.name}`,
+                    state: {
+                        countryName: country.name,
+                        nativeName: country.nativeName,
+                        region: country.region,
+                        capital: country.capital,
+                        population: country.population,
+                        subRegion: country.subRegion,
+                        topLevelDomain: country.topLevelDomain,
+                        currencies: country.currencies,
+                        languages: country.languages,
+                        borderCountries: country.borderCountries,
+                        flagPicUrl: country.flagPicUrl
+                    }
+                }}>
+                    <DisplayCard key={country.name} countryName={country.name} population={country.population} region={country.region} capital={country.capital} flag={country.flagPicUrl} />
+                </Link>
             })
             }
         </div>

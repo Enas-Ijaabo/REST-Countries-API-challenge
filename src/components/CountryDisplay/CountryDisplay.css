@@ -1,0 +1,49 @@
+.country-display{
+    max-width: 1440px;
+    padding: 0 80px;
+    justify-self: center;
+    margin: 50px auto 0 auto;
+}
+
+.back-button{
+       font-size: 20px;
+       text-decoration: none;
+       padding: 10px 30px;
+       box-shadow: 0 0 10px hsl(0, 0%, 52%);
+}
+
+.box{
+    margin-top: 50px;
+    display: flex;
+}
+
+.country-display .flag{
+    width: 560px;
+    height: 400px;
+    margin-right: 120px;
+}
+
+.country-info-display{
+    margin-right: 100px;
+}
+
+.country-name{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.country-display .title, .country-info-display .value{
+    font-size: 25px;
+    white-space: nowrap;
+}
+
+.border-countries{
+    margin-top: 20px;
+}
+
+.border-countries a{
+    box-shadow: 0 0 2px hsl(0, 0%, 52%);
+    margin-right: 20px;
+    padding: 5px 10px;
+    font-size: 25px;
+}

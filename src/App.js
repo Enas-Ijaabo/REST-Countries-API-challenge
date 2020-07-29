@@ -4,6 +4,8 @@ import './components/NavBar/NavBar'
 import NavBar from './components/NavBar/NavBar';
 import Container from './components/Container/Container';
 import DarkModeContextProvider from './context/DarkModeContext';
+import { Route } from 'react-router-dom';
+import CountryDisplay from './components/CountryDisplay/CountryDisplay';
 
 function App() {
 
@@ -11,9 +13,9 @@ function App() {
     <div className="App">
       <DarkModeContextProvider>
         <NavBar/>
-        <Container/>
+        <Route exact path='/' component= {Container} />
+        <Route path='/country/:countryName'  component= {CountryDisplay}/>
       </DarkModeContextProvider>
-
     </div>
   );
 }

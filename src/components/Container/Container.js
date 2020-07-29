@@ -18,8 +18,8 @@ const Container = (props) => {
 
     return (
         <div className="container">
-                <SearchBar  region={getSelectedRegion} countryname={getCountryName}></SearchBar>
-                <DisplayBox region={region} countryname={countryName} />
+            <SearchBar region={getSelectedRegion} countryname={getCountryName}></SearchBar>
+            <DisplayBox region={region} countryname={countryName} />
         </div>
     )
 }

@@ -1,0 +1,54 @@
+.navbar{
+    max-width: 1440px;
+    display: flex;
+    padding: 30px 80px ;
+    box-shadow: 0 6px 4px -6px hsl(0, 0%, 52%);
+    height: 80px;
+    box-sizing: border-box;
+    justify-self: center;
+    margin: 0 auto;
+    &.dark-mode{
+        background-color:  hsl(209, 23%, 22%);
+        box-shadow: 0 6px 4px -6px black;
+    }
+}
+
+
+.page-name{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.navbar .dark-mode-button{
+    display: flex;
+    justify-self: flex-end;
+    margin-left: auto;
+    width: 150px;
+}
+
+.moon{
+    width: 20px;
+    margin-right:5px;
+}
+
+.dark-mode-text{
+    font-weight: 600;
+}
+
+@media( max-width: 768px){
+    .navbar{
+       padding: 30px 4%;
+    }
+
+    .page-name{
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    .navbar .dark-mode-button{
+        width: 25%;
+    }
+    .dark-mode-text{
+        font-size: 13px;
+    }
+}
