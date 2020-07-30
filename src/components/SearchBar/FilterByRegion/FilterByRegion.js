@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
-import './FilterByRegion.css';
-import DarkModeContext from '../../../context/DarkModeContext';
+import React from 'react';
+import './FilterByRegion.scss';
 
 const FilterByRegion = (props) => {
 

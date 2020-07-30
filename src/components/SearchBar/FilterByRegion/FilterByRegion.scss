@@ -1,0 +1,27 @@
+.region-selector{
+    background-color: white;
+    border: none;
+    height: 50px;
+    padding-left: 20px;
+    justify-self: flex-end;
+    margin-left: auto;
+    outline:none; 
+    width: 200px;
+    box-shadow: -5px 4px 6px 0px hsl(0, 0%, 90%);
+    border-radius: 5px;
+}
+
+.dark-mode .region-selector{
+    background-color:  hsl(209, 23%, 22%);
+    box-shadow: -5px 4px 6px 0px hsl(207, 26%, 17%);
+    color: white;
+}
+
+@media( max-width: 768px){
+
+    .region-selector{
+       width: 54%;
+       justify-self: flex-start;
+       margin:0 auto 0 0;
+    }
+}

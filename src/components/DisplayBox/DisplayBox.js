@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import DisplayCard from './DisplayCard/DisplayCard';
-import './DisplayBox.css';
+import './DisplayBox.scss';
 import { DarkModeContext } from '../../context/DarkModeContext';
 import { Link } from 'react-router-dom';
 
@@ -67,7 +67,7 @@ const DisplayBox = (props) => {
         <div className={`display-box ${darkModeOn ? 'dark-mode' : ''}`}>
             {countries.map((country) => {
                 return <Link to={{
-                    pathname: `/country/:${country.name}`,
+                    pathname: `/country/${country.name}`,
                     state: {
                         countryName: country.name,
                         nativeName: country.nativeName,

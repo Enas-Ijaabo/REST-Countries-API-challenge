@@ -1,0 +1,47 @@
+.display-card{
+    width:260px;
+    margin:0 30px 75px 30px;
+    background-color: #FFF;
+    padding-bottom:60px ;
+    border-radius: 10px;
+    box-shadow: 0 0 10px hsl(0, 0%, 90%);
+
+
+    .flag{
+        width: 100%;
+        height: 160px;
+        margin-bottom: 30px;
+    }
+    
+    .title{
+        padding-left:40px ;
+        display: inline;
+        font-weight: 600;
+    }
+    
+    .value{
+        display: inline;
+    }
+    .country-name{
+        padding-left:40px ;
+        font-weight: 800;
+        font-size: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+.dark-mode .display-card{
+    background-color:  hsl(209, 23%, 22%);
+    color: white;
+    box-shadow: 0 0 10px hsl(207, 26%, 17%);
+}
+
+@media( max-width: 768px){
+
+    .display-card{
+        width: 70%;
+        margin:0 auto 75px auto;
+
+    }
+}

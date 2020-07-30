@@ -7,9 +7,11 @@
     box-sizing: border-box;
     justify-self: center;
     margin: 0 auto;
+    background-color:  hsl(0, 0%, 100%);
     &.dark-mode{
         background-color:  hsl(209, 23%, 22%);
         box-shadow: 0 6px 4px -6px black;
+        color: white;
     }
 }
 
@@ -23,7 +25,6 @@
     display: flex;
     justify-self: flex-end;
     margin-left: auto;
-    width: 150px;
 }
 
 .moon{

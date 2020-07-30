@@ -1,9 +1,12 @@
-import React, { useCallback, useState } from 'react';
-import './Container.css';
+import React, { useCallback, useState, useContext } from 'react';
+import './Container.scss';
 import SearchBar from '../SearchBar/SearchBar';
 import DisplayBox from '../DisplayBox/DisplayBox';
+import { DarkModeContext } from '../../context/DarkModeContext';
 
 const Container = (props) => {
+
+    const {darkModeOn} = useContext(DarkModeContext);
     const [region, setRegion] = useState('');
     const getSelectedRegion = useCallback((selectedRegion) => {
         setRegion(selectedRegion);
@@ -17,7 +20,7 @@ const Container = (props) => {
         []);
 
     return (
-        <div className="container">
+        <div className={`container ${darkModeOn? 'dark-mode': ''}`}>
             <SearchBar region={getSelectedRegion} countryname={getCountryName}></SearchBar>
             <DisplayBox region={region} countryname={countryName} />
         </div>

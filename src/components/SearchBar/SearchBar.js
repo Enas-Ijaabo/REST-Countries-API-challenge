@@ -1,7 +1,7 @@
 import React, { useCallback, useContext } from 'react';
 import FilterByRegion from './FilterByRegion/FilterByRegion'
 import Search from './Search/Search';
-import './SearchBar.css'
+import './SearchBar.scss'
 import { DarkModeContext } from '../../context/DarkModeContext';
 
 const SearchBar = (props) => {
