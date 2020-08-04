@@ -1,19 +1,18 @@
-.container{
+.container {
     margin: 1px auto 0 auto;
     max-width: 1440px;
     padding: 0 80px;
     background-color:  hsl(0, 0%, 98%);
-    justify-self: center;
     box-sizing: border-box;
 
-    &.dark-mode{
+    &.dark-mode {
         background-color:  hsl(207, 26%, 17%);
     }
 }
 
-@media( max-width: 768px){
+@media(max-width: 768px){
 
-    .container{
+    .container {
         padding: 0 4%;
     }
 }

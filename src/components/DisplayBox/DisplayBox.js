@@ -12,37 +12,16 @@ const DisplayBox = (props) => {
     useEffect(() => {
         let url;
         if (props.region !== '' && props.countryname === '') {
-            url = `https://restcountries.eu/rest/v2/region/${props.region}`;
+            url = `https://restcountries.eu/rest/v2/region/${props.region}?fields=name;region;capital;population;flag`;
         } else if (props.countryname !== '' && props.region === '') {
-            url = `https://restcountries.eu/rest/v2/name/${props.countryname}`;
+            url = `https://restcountries.eu/rest/v2/name/${props.countryname}?fields=name;region;capital;population;flag`;
         } else {
-            url = 'https://restcountries.eu/rest/v2/all';
+            url = 'https://restcountries.eu/rest/v2/all?fields=name;region;capital;population;flag';
         }
 
         fetch(url)
             .then((response) => {
                 return response.json();
-            })
-            .then((responseData) => {
-                const countryArray = [];
-                for (let i = 0; i < responseData.length; i++) {
-                    const nesData = {
-                        name: responseData[i].name,
-                        nativeName: responseData[i].nativeName,
-                        alpha3Code: responseData[i].alpha3Code,
-                        region: responseData[i].region,
-                        capital: responseData[i].capital,
-                        population: responseData[i].population,
-                        subRegion: responseData[i].subregion,
-                        topLevelDomain: responseData[i].topLevelDomain,
-                        currencies: responseData[i].currencies,
-                        languages: responseData[i].languages,
-                        borderCountries: responseData[i].borders,
-                        flagPicUrl: responseData[i].flag
-                    }
-                    countryArray.push(nesData);
-                }
-                return countryArray;
             }).then((countryArray) => {
                 if (props.region !== '' && props.countryname !== '') {
                     const filteredCountryArray = countryArray.filter((country) => {
@@ -65,26 +44,13 @@ const DisplayBox = (props) => {
     return (
 
         <div className={`display-box ${darkModeOn ? 'dark-mode' : ''}`}>
-            {countries.map((country) => {
-                return <Link to={{
-                    pathname: `/country/${country.name}`,
-                    state: {
-                        countryName: country.name,
-                        nativeName: country.nativeName,
-                        region: country.region,
-                        capital: country.capital,
-                        population: country.population,
-                        subRegion: country.subRegion,
-                        topLevelDomain: country.topLevelDomain,
-                        currencies: country.currencies,
-                        languages: country.languages,
-                        borderCountries: country.borderCountries,
-                        flagPicUrl: country.flagPicUrl
-                    }
+            {countries.length>=1? countries.map((country) => {
+                return <Link key={country.name+'display card'} to={{
+                    pathname: `/country/${country.name}`
                 }}>
-                    <DisplayCard key={country.name} countryName={country.name} population={country.population} region={country.region} capital={country.capital} flag={country.flagPicUrl} />
+                    <DisplayCard key={country.name} countryName={country.name} population={country.population} region={country.region} capital={country.capital} flag={country.flag} />
                 </Link>
-            })
+            }): ''
             }
         </div>
     )

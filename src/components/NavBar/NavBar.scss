@@ -1,5 +1,4 @@
-.navbar{
-    max-width: 1440px;
+.navbar {
     display: flex;
     padding: 30px 80px ;
     box-shadow: 0 6px 4px -6px hsl(0, 0%, 52%);
@@ -8,48 +7,55 @@
     justify-self: center;
     margin: 0 auto;
     background-color:  hsl(0, 0%, 100%);
+    
     &.dark-mode{
         background-color:  hsl(209, 23%, 22%);
         box-shadow: 0 6px 4px -6px black;
         color: white;
+
+        .moon {
+            fill: white;
+            border: none;
+        }
     }
 }
 
 
-.page-name{
+.page-name {
     font-size: 20px;
     font-weight: 800;
 }
 
-.navbar .dark-mode-button{
+.navbar .dark-mode-button {
     display: flex;
     justify-self: flex-end;
     margin-left: auto;
 }
 
-.moon{
+.moon {
     width: 20px;
     margin-right:5px;
 }
 
-.dark-mode-text{
+.dark-mode-text {
     font-weight: 600;
 }
 
-@media( max-width: 768px){
+@media( max-width: 768px) {
     .navbar{
        padding: 30px 4%;
     }
 
-    .page-name{
+    .page-name {
         font-size: 16px;
         font-weight: 800;
     }
 
-    .navbar .dark-mode-button{
+    .navbar .dark-mode-button {
         width: 25%;
     }
-    .dark-mode-text{
+
+    .dark-mode-text {
         font-size: 13px;
     }
 }

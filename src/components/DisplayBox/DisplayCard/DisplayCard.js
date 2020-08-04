@@ -5,7 +5,7 @@ const DisplayCard = (props) => {
 
     return (
         <div className={`display-card`}>
-        <img className="flag" src={props.flag} alt={props.countryName} />
+        <div className="flag" style={{backgroundImage: `url(${props.flag})` }}  />
         <div className='country-name'>{props.countryName}</div>
         <div> <div className='title'>Population: </div><div className='value'>{props.population}</div></div>
         <div> <div className='title'>Region: </div><div className='value'>{props.region}</div></div>
