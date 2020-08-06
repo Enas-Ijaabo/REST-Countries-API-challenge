@@ -1,6 +1,6 @@
 # Frontend Mentor - REST Countries API with color theme switcher
 
-using React the challenge is to integrate with the [REST Countries API](https://restcountries.eu) to pull country data and display it like in the designs.
+Using React, the challenge is to integrate with the [REST Countries API](https://restcountries.eu) to pull country data and display it like in the designs.
 
 The users should be able to:
 
