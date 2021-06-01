@@ -1,3 +1,7 @@
+# Short Background 
+
+This is a simple React app I worked on in the beginning of my on going journey of learning about and working on FE and React projects.
+
 # Frontend Mentor - REST Countries API with color theme switcher
 
 Using React, the challenge is to integrate with the [REST Countries API](https://restcountries.eu) to pull country data and display it like in the designs.
