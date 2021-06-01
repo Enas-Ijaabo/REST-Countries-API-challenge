@@ -1,0 +1,11 @@
+---
+application:
+  name: "rest-countries-api-challenge"
+  project: "country api challenge"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-rest-countries-api-challenge"
+  routes:
+  - application_name: "rest-countries-api-challenge"
+    paths:
+    - "/*"
