@@ -4,7 +4,7 @@ application:
   project: "country api challenge"
   organization: "QoveryCommunity"
   publicly_accessible: true
-  port: 3000
+  port: 5000
 routers:
 - name: "main-rest-countries-api-challenge"
   routes:
